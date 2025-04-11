@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="<?php bloginfo( "charset" ) ?>">
-    <title><?php  bloginfo( "name" ); ?>  </title>
-    <?php  wp_head(); ?>  
-</head>
+<?php  get_header(); ?>  
 <body <?php  body_class(); ?>  >
-
-    <div class="header">
-        <div class="container mx-auto">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="tagline">
-                        <?php  bloginfo( "description" ) ?>  
-                    </h3>
-                    <h1>
-                        <a href="<?php echo home_url( ); ?>"><?php  bloginfo("name"); ?></a>  
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php  get_template_part( "hero" ); ?>  
     <div class="posts">
         <?php  
         
@@ -73,7 +53,5 @@
         </div>
        </div>
     </div>
-    
-    <?php  wp_footer(); ?>  
-</body>
-</html>
+   
+    <?php  get_footer(); ?>  
